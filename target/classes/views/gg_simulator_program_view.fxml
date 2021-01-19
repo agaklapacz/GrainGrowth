@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="680.0" prefWidth="900.0" style="-fx-background-color: LIGHTGREEN;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ggsimulator.controllers.GrainGrowthProgramController">
+   <children>
+      <TextField fx:id="widthField" layoutX="18.0" layoutY="68.0" prefHeight="26.0" prefWidth="149.0" AnchorPane.leftAnchor="20.0" />
+      <TextField fx:id="heightField" layoutX="20.0" layoutY="122.0" prefHeight="26.0" prefWidth="149.0" AnchorPane.leftAnchor="20.0" />
+      <Label layoutX="20.0" layoutY="46.0" text="Width:" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="46.0" />
+      <Label layoutX="20.0" layoutY="98.0" prefHeight="17.0" prefWidth="82.0" text="Height:" AnchorPane.leftAnchor="20.0" />
+      <CheckBox fx:id="PBCCheckBox" layoutX="21.0" layoutY="155.0" mnemonicParsing="false" text="PBC" AnchorPane.leftAnchor="20.0" />
+      <ScrollPane fx:id="scrollPane" layoutX="310.0" layoutY="50.0" prefHeight="570.0" prefWidth="570.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="45.0" />
+      <Button fx:id="generateButton" layoutX="20.0" layoutY="180.0" mnemonicParsing="false" onAction="#generateButtonOnAction" prefHeight="26.0" prefWidth="149.0" style="-fx-background-color: WHITE;" text="Create Board" AnchorPane.leftAnchor="20.0" />
+      <Button fx:id="randomizeButton" layoutX="20.0" layoutY="365.0" mnemonicParsing="false" onAction="#randomizeButtonOnAction" prefHeight="26.0" prefWidth="149.0" style="-fx-background-color: WHITE;" text="Generate" AnchorPane.leftAnchor="20.0" />
+      <Label layoutX="13.0" layoutY="415.0" text="Neighborhood" AnchorPane.leftAnchor="20.0" />
+      <Label layoutX="20.0" layoutY="237.0" text="Grains arrangement" AnchorPane.leftAnchor="20.0" />
+      <TextField fx:id="randomAmountTextField" layoutX="155.0" layoutY="263.0" prefHeight="25.0" prefWidth="43.0" />
+      <TextField fx:id="regularAmountTextField" layoutX="155.0" layoutY="297.0" prefHeight="25.0" prefWidth="43.0" />
+      <TextField fx:id="randomWithRadiusAmountTextField" layoutX="155.0" layoutY="330.0" prefHeight="25.0" prefWidth="43.0" />
+      <TextField fx:id="randomWithRadiusRadiusTextField" layoutX="244.0" layoutY="330.0" prefHeight="25.0" prefWidth="43.0" />
+      <Label layoutX="154.0" layoutY="237.0" text="Amount:" />
+      <Label layoutX="200.0" layoutY="333.0" text="Radius:" />
+      <ComboBox fx:id="comboBox" layoutX="20.0" layoutY="440.0" prefHeight="26.0" prefWidth="144.0" style="-fx-background-color: WHITE;" AnchorPane.leftAnchor="20.0" />
+      <TextArea fx:id="textArea" layoutX="385.0" layoutY="621.0" prefHeight="42.0" prefWidth="495.0" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="20.0" />
+      <Label layoutX="310.0" layoutY="634.0" text="Messages:" AnchorPane.bottomAnchor="33.0" />
+      <Separator layoutX="-5.0" layoutY="399.0" prefHeight="16.0" prefWidth="302.0" />
+      <Separator layoutX="291.0" layoutY="2.0" orientation="VERTICAL" prefHeight="681.0" prefWidth="15.0" />
+      <Label layoutX="313.0" layoutY="23.0" text="Board" AnchorPane.topAnchor="20.0" />
+      <Separator layoutX="-5.0" layoutY="473.0" prefHeight="16.0" prefWidth="302.0" />
+      <Separator layoutX="-5.0" layoutY="213.0" prefHeight="16.0" prefWidth="302.0" />
+      <Button fx:id="stopButton" layoutX="24.0" layoutY="556.0" mnemonicParsing="false" onAction="#stopButtonOnAction" prefHeight="26.0" prefWidth="144.0" style="-fx-background-color: WHITE;" text="Stop" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="20.0" />
+      <Button fx:id="resetButton" layoutX="16.0" layoutY="602.0" mnemonicParsing="false" onAction="#resetButtonOnAction" prefHeight="26.0" prefWidth="144.0" style="-fx-background-color: WHITE;" text="Reset" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="20.0" />
+      <Button fx:id="startButton" layoutX="23.0" layoutY="482.0" mnemonicParsing="false" onAction="#startButtonOnAction" prefHeight="26.0" prefWidth="144.0" style="-fx-background-color: White;" text="Start" AnchorPane.bottomAnchor="140.0" AnchorPane.leftAnchor="20.0" />
+      <Button fx:id="monteCarloButton" layoutX="177.0" layoutY="590.0" mnemonicParsing="false" onAction="#monteCarloButtonOnAction" prefHeight="26.0" prefWidth="144.0" style="-fx-background-color: WHITE;" text="MonteCarlo" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" />
+      <Button fx:id="DRXButton" layoutX="170.0" layoutY="638.0" mnemonicParsing="false" onAction="#DRXButtonOnAction" prefHeight="26.0" prefWidth="120.0" style="-fx-background-color: WHITE;" text="DRX_NUCLEATION" />
+      <Button fx:id="DRXStartButton" layoutX="170.0" layoutY="598.0" mnemonicParsing="false" onAction="#DRXStartButtonOnAction" prefHeight="26.0" prefWidth="120.0" style="-fx-background-color: WHITE;" text="DRX_GROWTH" />
+      <Button fx:id="DRXStart1Button" layoutX="170.0" layoutY="558.0" mnemonicParsing="false" onAction="#DRXStartButtonOnAction" prefHeight="26.0" prefWidth="120.0" style="-fx-background-color: WHITE;" text="DRX_START" />
+      <Label layoutX="22.0" layoutY="489.0" text="Simulation Controls" AnchorPane.leftAnchor="20.0" />
+      <Label layoutX="23.0" layoutY="23.0" text="Board Configuration" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="20.0" />
+      <Slider fx:id="timeStepSlider" layoutX="198.0" layoutY="507.0" max="1.0" min="0.1" prefHeight="26.0" prefWidth="92.0" showTickLabels="true" showTickMarks="true" value="1.0" />
+      <Label layoutX="210.0" layoutY="489.0" text="Time step" />
+      <CheckBox fx:id="randomCheckBox" layoutX="20.0" layoutY="267.0" mnemonicParsing="false" onAction="#randomCheckBoxOnAction" prefHeight="17.0" prefWidth="130.0" text="Random" />
+      <CheckBox fx:id="regularCheckBox" layoutX="20.0" layoutY="301.0" mnemonicParsing="false" onAction="#regularCheckBoxOnAction" prefHeight="17.0" prefWidth="130.0" text="Regular" />
+      <CheckBox fx:id="randomWithRadiusCheckBox" layoutX="20.0" layoutY="333.0" mnemonicParsing="false" onAction="#randomWithRadiusCheckBoxOnAction" text="Random with Radius" />
+   </children>
+</AnchorPane>
